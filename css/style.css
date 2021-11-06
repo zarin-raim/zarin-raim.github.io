@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: Lato, sans-serif;
+}
+
+body {
+    background-color: #e9ebee;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "page-name"
+                         "main-content";
+    height: 100vh;
+}
+
+/* =======================
+********* Header ********
+========================*/
+
+#header {
+    grid-area: page-name;
+    background-color: #fcfcfc;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#title {
+    justify-self: start;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.055em;
+}
+
+#title h1 {
+    display: block;
+}
+
+#title h1 strong {
+    font-weight: 900;
+}
+
+#title + span {
+    width: 100%;
+}
+
+/* =======================
+******* Navigation ******
+========================*/
+
+#navbar {
+    display: none;
+    background-color: #C4C4C4;
+}
+
+.side {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+
+}
+
+.links {
+    height: 100%;
+    list-style-type: none;
+}
+
+.links li > a {
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5vw;
+}
+
+.links a:hover {
+    color: #0474bc;
+}
+
+/* =======================
+******* Content ******
+========================*/
+
+#content {
+    grid-area: main-content;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "subtitle"
+                         "contacts";
+}
+
+.subtitle {
+    grid-area: subtitle;
+}
+
+.subtitle h2 {
+    text-align: end;
+}
+
+.contacts {
+    grid-area: contacts;
+    align-self: end;
+    font-size: 1.5rem;
+}
+
+/* =======================
+******* Mobile Menu ******
+========================*/
+.mobile-btn {
+    justify-self: end;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sidenav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #C4C4C4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Mobile to Tablet/Desktop */
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "page-name    navbar"
+                             "main-content navbar";
+    }
+
+    #navbar {
+        display: initial;
+        grid-area: navbar;
+        height: 100vh;
+    }
+
+    .mobile-btn {
+        display: none;
+    }
+}
+
