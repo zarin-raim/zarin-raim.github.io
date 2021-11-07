@@ -5,7 +5,6 @@
 }
 
 html {
-    font-size: 10px;
     font-family: Lato, sans-serif;
 }
 
@@ -16,27 +15,139 @@ body {
 .container {
     display: grid;
     grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: "page-name"
                          "main-content";
     height: 100vh;
 }
 
 /* =======================
+******* Typography ******
+========================*/
+h1 {
+    font-size: 49px;
+    line-height: 59px;
+}
+
+h2 {
+    font-size: 39px;
+    line-height: 47px;
+}
+
+h3 {
+    font-size: 31px;
+    line-height: 37px;
+}
+
+h4 {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+p, a, li {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.label {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 61px;
+        line-height: 73px;
+    }
+
+    h2 {
+        font-size: 49px;
+        line-height: 59px;
+    }
+
+    h3 {
+        font-size: 39px;
+        line-height: 47px;
+    }
+
+    h4 {
+        font-size: 31px;
+        line-height: 37px;
+    }
+
+    h5 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    p, a, li {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .label {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 85px;
+        line-height: 102px;
+    }
+
+    h2 {
+        font-size: 68px;
+        line-height: 82px;
+    }
+
+    h3 {
+        font-size: 55px;
+        line-height: 66px;
+    }
+
+    h4 {
+        font-size: 44px;
+        line-height: 53px;
+    }
+
+    h5 {
+        font-size: 35px;
+        line-height: 42px;
+    }
+
+    p, a, li {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .label {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+
+/* =======================
 ********* Header ********
 ========================*/
-
 #header {
     grid-area: page-name;
-    background-color: #fcfcfc;
 
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    padding: 10px;
 }
 
 #title {
     justify-self: start;
-    font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: 0.055em;
 }
@@ -45,12 +156,48 @@ body {
     display: block;
 }
 
-#title h1 strong {
-    font-weight: 900;
-}
-
 #title + span {
     width: 100%;
+}
+
+
+/* =======================
+******* Content ******
+========================*/
+
+#content {
+    grid-area: main-content;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "subtitle"
+                         "contacts";
+    padding: 10px;
+}
+
+.subtitle {
+    grid-area: subtitle;
+}
+
+.subtitle h2 {
+    text-align: end;
+}
+
+
+.contacts {
+    grid-area: contacts;
+    align-self: center;
+}
+
+@media (min-width: 768px) {
+    .contacts {
+        align-self: end;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contacts {
+        align-self: end;
+    }
 }
 
 /* =======================
@@ -67,7 +214,6 @@ body {
     position: fixed;
     z-index: 1;
     overflow-x: hidden;
-
 }
 
 .links {
@@ -80,7 +226,6 @@ body {
     color: #333;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 2.5vw;
 }
 
 .links a:hover {
@@ -88,39 +233,13 @@ body {
 }
 
 /* =======================
-******* Content ******
-========================*/
-
-#content {
-    grid-area: main-content;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "subtitle"
-                         "contacts";
-}
-
-.subtitle {
-    grid-area: subtitle;
-}
-
-.subtitle h2 {
-    text-align: end;
-}
-
-.contacts {
-    grid-area: contacts;
-    align-self: end;
-    font-size: 1.5rem;
-}
-
-/* =======================
 ******* Mobile Menu ******
 ========================*/
 .mobile-btn {
     justify-self: end;
-    font-size: 30px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 35px;
 }
 
 .sidenav {
@@ -137,6 +256,8 @@ body {
 }
 
 .sidenav .closebtn {
+    cursor: pointer;
+
     position: absolute;
     top: 0;
     right: 25px;
@@ -164,4 +285,3 @@ body {
         display: none;
     }
 }
-
