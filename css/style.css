@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    padding-left: 10%;
     background-color: #e9ebee;
 }
 
@@ -59,7 +60,7 @@ body {
     grid-template-rows: auto 1fr;
     grid-template-areas: "subtitle"
                          "contacts";
-    padding: 20px;
+    padding: 5%;
 }
 
 .subtitle {
@@ -154,7 +155,7 @@ body {
     cursor: pointer;
 
     position: absolute;
-    top: 0;
+    top: 25px;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
