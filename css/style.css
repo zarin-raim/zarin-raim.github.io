@@ -10,7 +10,6 @@ html {
 
 body {
     padding-left: 10%;
-    background-color: #e9ebee;
 }
 
 .container {
@@ -20,6 +19,17 @@ body {
     grid-template-areas: "page-name"
                          "main-content";
     height: 100vh;
+    gap: 16px;
+}
+
+#content {
+    padding-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+    #content {
+        padding-right: 5%;
+    }
 }
 
 /* =======================
@@ -39,58 +49,11 @@ body {
     justify-self: start;
     font-weight: 800;
     letter-spacing: 0.055em;
+    flex-grow: 2;
 }
 
 #title h1 {
     display: block;
-}
-
-#title + span {
-    width: 100%;
-}
-
-
-/* =======================
-******* Content ******
-========================*/
-
-#content {
-    grid-area: main-content;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "subtitle"
-                         "contacts";
-    padding: 5%;
-}
-
-.subtitle {
-    grid-area: subtitle;
-}
-
-.subtitle h2 {
-    text-align: end;
-}
-
-
-.contacts {
-    grid-area: contacts;
-    align-self: center;
-}
-
-.contacts ul {
-    list-style-type: none;
-}
-
-.contacts ul a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
-
-@media (min-width: 768px) {
-    .contacts {
-        align-self: end;
-    }
 }
 
 /* =======================
@@ -106,6 +69,9 @@ body {
     position: fixed;
     z-index: 1;
     overflow-x: hidden;
+
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .links {
@@ -173,11 +139,7 @@ body {
 
     #navbar {
         grid-area: navbar;
-        height: 100vh;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: initial;
     }
 
     .mobile-btn {
