@@ -1,0 +1,39 @@
+.place {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.place > .dates {
+    flex-basis: 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.place > .dates > * {
+}
+
+.place > .dates > .vl {
+    border: 1px solid #000000;
+    height: 50px;
+}
+
+.place > .name {
+    flex-basis: auto;
+}
+
+.place > .name > ul {
+    list-style-position: inside;
+}
+
+.place > figure {
+    flex-basis: 20%;
+    min-width: 100px;
+}
+@media (min-width: 768px) {
+    .place > figure {
+        min-width: 200px;
+    }
+}

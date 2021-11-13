@@ -1,0 +1,15 @@
+/* =======================
+******* Content ******
+========================*/
+
+#content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#content > section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
