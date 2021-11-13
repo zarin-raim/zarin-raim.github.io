@@ -26,7 +26,7 @@ h5 {
     line-height: 24px;
 }
 
-p, a, li {
+p, a, li, section {
     font-size: 16px;
     line-height: 24px;
 }
@@ -62,7 +62,7 @@ p, a, li {
         line-height: 30px;
     }
 
-    p, a, li {
+    p, a, li, section {
         font-size: 20px;
         line-height: 30px;
     }
@@ -99,7 +99,7 @@ p, a, li {
         line-height: 42px;
     }
 
-    p, a, li {
+    p, a, li, section {
         font-size: 28px;
         line-height: 42px;
     }
