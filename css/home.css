@@ -1,0 +1,40 @@
+/* =======================
+******* Content ******
+========================*/
+
+#content {
+    grid-area: main-content;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "subtitle"
+                         "contacts";
+}
+
+.subtitle {
+    grid-area: subtitle;
+}
+
+.subtitle h2 {
+    text-align: end;
+}
+
+.contacts {
+    grid-area: contacts;
+    align-self: center;
+}
+
+.contacts ul {
+    list-style-type: none;
+}
+
+.contacts ul a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .contacts {
+        align-self: end;
+    }
+}
