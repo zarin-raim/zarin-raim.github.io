@@ -1,6 +1,7 @@
 .place {
     display: flex;
     flex-direction: row;
+    margin-bottom: 5%;
 }
 @media (max-width: 768px) {
     .place {
@@ -39,6 +40,7 @@
 
 .place > .name {
     flex-basis: auto;
+    margin-left: 5%;
 }
 
 .place > .name > ul {
