@@ -1,23 +1,40 @@
 .place {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .place {
+        flex-direction: column;
+    }
+}
+
+.place > * {
+    padding: 0 5px;
 }
 
 .place > .dates {
     flex-basis: 5%;
+    align-self: center;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-.place > .dates > * {
+    flex-direction: column;
 }
 
 .place > .dates > .vl {
     border: 1px solid #000000;
-    height: 50px;
+    height: 70px;
+}
+@media (max-width: 768px) {
+    .place > .dates  {
+        flex-direction: row;
+    }
+
+    .place > .dates > .vl {
+        height: 0;
+        width: 70px;
+        margin: 0 5px;
+    }
 }
 
 .place > .name {
@@ -28,12 +45,26 @@
     list-style-position: inside;
 }
 
-.place > figure {
+.place figure {
     flex-basis: 20%;
-    min-width: 100px;
+    margin-left: auto;
 }
-@media (min-width: 768px) {
-    .place > figure {
-        min-width: 200px;
+
+.place figure img {
+    min-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.place .college img {
+    padding: 20px;
+    background-color: #213b60;
+}
+
+@media (max-width: 768px) {
+    .place figure {
+        display: none;
     }
 }
