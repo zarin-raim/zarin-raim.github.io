@@ -1,0 +1,185 @@
+#content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* https://www.codingnepalweb.com/skills-bar-ui-design-html-css/ */
+
+.skill-bars {
+    padding: 25px 30px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 850px) {
+    #content {
+        flex-direction: row;
+    }
+    .skill-bars {
+        width: 45%;
+    }
+}
+
+.skill-bars .bar {
+    margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 1;
+}
+
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #6665ee;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+/* coding languages*/
+.bar .progress-line.kotlin span {
+    width: 80%;
+}
+
+.bar .progress-line.python span,
+.bar .progress-line.css span {
+    width: 65%;
+}
+
+.bar .progress-line.java span {
+    width: 55%;
+}
+
+.bar .progress-line.html span {
+    width: 75%;
+}
+
+/* technologies */
+.bar .progress-line.android span {
+    width: 70%;
+}
+
+.bar .progress-line.database span,
+.bar .progress-line.compose span {
+    width: 45%;
+}
+
+.bar .progress-line.git span {
+    width: 65%;
+}
+
+.bar .progress-line.blender span {
+    width: 20%;
+}
+
+/* languages*/
+.bar .progress-line.english span {
+    width: 70%;
+}
+
+.bar .progress-line.czech span {
+    width: 75%;
+}
+
+.bar .progress-line.russian span {
+    width: 100%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    top:-4px;
+    right: 0;
+    font-weight: 500;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+}
+
+/* coding languages*/
+.progress-line.kotlin span::after {
+    content: "80%";
+}
+
+.progress-line.python span::after,
+.progress-line.css span::after {
+    content: "65%";
+}
+
+.progress-line.java span::after {
+    content: "55%";
+}
+
+.progress-line.html span::after {
+    content: "75%";
+}
+
+.progress-line.html span::after {
+    content: "75%";
+}
+
+/* technologies */
+.progress-line.android span::after {
+    content: "70%";
+}
+
+.progress-line.git span::after {
+    content: "65%";
+}
+
+.progress-line.database span::after,
+.progress-line.compose span::after {
+    content: "45%";
+}
+
+.progress-line.blender span::after {
+    content: "20%";
+}
+
+/* languages */
+.progress-line.english span::after {
+    content: "70%";
+}
+
+.progress-line.czech span::after {
+    content: "75%";
+}
+
+.progress-line.russian span::after {
+    content: "100%";
+}
