@@ -12,23 +12,13 @@ h1 {
 }
 
 h2 {
-    font-size: 39px;
-    line-height: 47px;
-}
-
-h3 {
-    font-size: 31px;
-    line-height: 37px;
-}
-
-h4, .links li > a  {
-    font-size: 25px;
-    line-height: 30px;
-}
-
-h5 {
     font-size: 20px;
     line-height: 24px;
+}
+
+.links li > a  {
+    font-size: 25px;
+    line-height: 30px;
 }
 
 p, a, li {
@@ -48,23 +38,13 @@ p, a, li {
     }
 
     h2 {
-        font-size: 49px;
-        line-height: 59px;
-    }
-
-    h3 {
-        font-size: 39px;
-        line-height: 47px;
-    }
-
-    h4, .links li > a  {
-        font-size: 31px;
-        line-height: 37px;
-    }
-
-    h5 {
         font-size: 25px;
         line-height: 30px;
+    }
+
+    .links li > a  {
+        font-size: 31px;
+        line-height: 37px;
     }
 
     p, a, li {
@@ -85,23 +65,13 @@ p, a, li {
     }
 
     h2 {
-        font-size: 68px;
-        line-height: 82px;
-    }
-
-    h3 {
-        font-size: 55px;
-        line-height: 66px;
-    }
-
-    h4, .links li > a {
-        font-size: 44px;
-        line-height: 53px;
-    }
-
-    h5 {
         font-size: 35px;
         line-height: 42px;
+    }
+
+    .links li > a {
+        font-size: 44px;
+        line-height: 53px;
     }
 
     p, a, li {
