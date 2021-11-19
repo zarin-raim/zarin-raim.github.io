@@ -1,0 +1,7 @@
+.mobile-btn, .side {
+    display: none;
+}
+
+.bar .progress-line span {
+    -webkit-print-color-adjust: exact;
+}
