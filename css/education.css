@@ -3,6 +3,7 @@
     flex-direction: row;
     margin-bottom: 5%;
 }
+
 @media (max-width: 768px) {
     .place {
         flex-direction: column;
@@ -28,7 +29,7 @@
 }
 
 @media (max-width: 768px) {
-    .place > .dates  {
+    .place > .dates {
         flex-direction: row;
     }
 

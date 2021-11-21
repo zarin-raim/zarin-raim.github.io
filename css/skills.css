@@ -20,6 +20,7 @@
     #content {
         flex-direction: row;
     }
+
     .skill-bars {
         width: 45%;
     }
@@ -123,7 +124,7 @@
 
 .progress-line span::after {
     position: absolute;
-    top:-4px;
+    top: -4px;
     right: 0;
     font-weight: 500;
     color: #fff;

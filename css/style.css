@@ -101,16 +101,17 @@ body {
     color: var(--accent-color-light, #b865e2);
 }
 
-.active-page{
+.active-page {
     position: relative;
     margin-left: 20px;
 }
+
 .active-page a {
     color: var(--accent-color-light, #b865e2);
 }
 
 .active-page:before {
-    content:'';
+    content: '';
     position: absolute;
     top: 0;
     left: -25px;
